@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         
         userDefaults.set(colours, forKey: "colours")
         userDefaults.set(book, forKey: "book")
+        
+        userDefaults.set(true, forKey: "bool")
     }
     
     func getValuesFromUserDefaults(){
@@ -44,6 +46,8 @@ class ViewController: UIViewController {
         let rollNumber = userDefaults.integer(forKey: "rollnumber")
         let city =  userDefaults.string(forKey: "city")
         let state = userDefaults.string(forKey: "state")
+        
+        let boolValue = userDefaults.bool(forKey: "bool")
         
         let extractedColours = userDefaults.array(forKey: "colours")
         let extractedBookDetails = userDefaults.dictionary(forKey: "book")
@@ -57,5 +61,7 @@ class ViewController: UIViewController {
         }
         
         print("name -- \(name!) -- rollNumber -- \(rollNumber) -- city -- \(city!)  -- state -- \(state!)")
+        
+        print(boolValue)
     }
 }
